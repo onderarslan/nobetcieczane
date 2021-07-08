@@ -11,7 +11,7 @@ def sorgula():
             'authorization': "apikey 6lAwcrDHJBhFNmTr3Fc51d:0YoE6c6Bk9MPQo3a0ihbBV"
             }
         return  requests.post(url,headers=headers).json()
-        
+
 while True:
     il = input("İli Girin: ")
     if il == "çıkış" or il == "çık" or il == "ç":
@@ -23,4 +23,5 @@ while True:
 
     for each in gelen["result"]:
         print (each["name"]+" - "+ each["address"])
+        print("https://maps.google.com/maps?q="+each["loc"]+"&hl=es&z=14")
 
